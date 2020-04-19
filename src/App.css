@@ -1,38 +1,155 @@
-.App {
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.store__toolbar {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.store__content {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 30px;
+  text-transform: uppercase;
   text-align: center;
+  -webkit-transform: scale(0.7,1);
+  -moz-transform: scale(0.7,1);
+  -ms-transform: scale(0.7,1);
+  -o-transform: scale(0.7,1);
+  transform: scale(0.7,1);
+
+  margin-bottom: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-color {
+  text-transform: lowercase;
+  text-align: center;
+  color: gray;  
+  text-align: center;
+  vertical-align: middle;  
+  -webkit-transform: scale(0.7,1);
+  -moz-transform: scale(0.7,1);
+  -ms-transform: scale(0.7,1);
+  -o-transform: scale(0.7,1);
+  transform: scale(0.7,1);  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-price {
+  color: rgb(212,75,56);
+  transform: scale(0.9,1.6);
+  font-weight: 500;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-price__currency {
+  font-family: serif;
+}
+
+a.product-add-to-cart-button {
+  color: rgb(212,75,56);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  transform: scale(0.8,0.8);
+
+  -webkit-user-select: none;
+  user-select: none;
+  background: rgba(212, 75, 56, 0);
+  padding: .7em 1.5em;
+  outline: none;
+  border-radius: 20px;
+  border-color: rgb(212,75,56);
+  border-style: solid;
+  border-width: thin;
+
+  margin-right: 10px;
+}
+
+a.product-add-to-cart-button:hover { 
+  background: rgb(232,95,76);
+  color: white; 
+}  
+
+a.product-add-to-cart-button:active { 
+  background: rgb(152,15,0);
+  color: white;
+}  
+
+.list-view {   
+  background-color: #f5f5f5;  
+}
+ 
+.shop-item {   
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  height: 120px;
+  margin-left: 6px;
+  justify-content: space-between; 
+}
+
+.shop-item__add-to-cart-button {
+  transform: scale(0.8,0.8);
+  min-width: 160px;
+}
+
+.shop-item__product-img {
+  background-position-x: left;
+  background-position-y: 78%;
+  background-size: cover;
+  width: 200px;
+  height: 120px;
+  min-width: 200px;  
+}
+
+.card-view {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  align-content: stretch;
+}
+
+.shop-card {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 6px;
+  padding: 26px;    
+  margin: 20px;
+  box-sizing: border-box;
+  background-color:#f5f5f5;
+  box-shadow: 0px 6px 16px 0px rgba(122,122,122,0.5);
+}
+
+.shop-card__product-img {
+  width: 100%;
+  height: 100%;
+  background-position: center;  
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shop-card__product-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;  
 }
